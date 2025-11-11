@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="icon" href="happy.png">
+</head>
+
+<body>
+
+    <!-- div geral -->
+    <div class="body">
+
+        <!-- div dos protagonistas à esquerda -->
+        <div class="protas">
+            <img src="protas1.png">
+        </div>
+
+        <!-- div da parte de cadastro à direita -->
+        <div class="cadastro">
+
+
+            <!-- div da parte superior do cadastro -->
+            <div class="cadastro_top">
+                <img src="happy.png" width=70 length=70>
+                <p>ShonenTech</p>
+                <p class="cadastre-se">Cadastre-se</p> <br>
+            </div>
+
+            <!-- div da parte do meio do cadastro -->
+            <div class="cadastro_mid">
+
+                <!-- parte esquerda do meio -->
+                <div class="mid_left">
+                    <p class="campos">Nome</p>
+                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira seu nome"><br>
+
+                    <p class="campos">Telefone</p>
+                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira seu telefone"><br>
+
+                    <p class="campos">Senha</p>
+                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira sua senha">
+                </div>
+
+                <!-- parte direita do meio -->
+                <div class="mid_left">
+                    <p class="campos">Sobrenome</p>
+                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira seu sobrenome"><br>
+
+                    <p class="campos">Email</p>
+                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira seu email"><br>
+
+                    <p class="campos">Confirmar senha</p>
+                    <input type="text" id="inp_nome" class="inputs" placeholder="Confirme sua senha">
+                </div>
+
+
+            </div>
+
+            <div class="cadastro_bot">
+
+                <br>
+                <button onclick="login()" class="botao_cadastrar"> <b>Cadastrar</b></button>
+
+                <button class="redi_login"><b>Login</b></button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    function login() {
+        window.location.href = "login.html"
+    }
+
+</script>
