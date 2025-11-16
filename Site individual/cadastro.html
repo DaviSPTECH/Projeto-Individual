@@ -26,7 +26,7 @@
             <!-- div da parte superior do cadastro -->
             <div class="cadastro_top">
                 <img src="happy.png" width=70 length=70>
-                <p>ShonenTech</p>
+                <p class="titulo"><b>ShonenTech</b></p>
                 <p class="cadastre-se">Cadastre-se</p> <br>
             </div>
 
@@ -38,34 +38,35 @@
                     <p class="campos">Nome</p>
                     <input type="text" id="inp_nome" class="inputs" placeholder="Insira seu nome"><br>
 
-                    <p class="campos">Telefone</p>
-                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira seu telefone"><br>
-
-                    <p class="campos">Senha</p>
-                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira sua senha">
+                    <p class="campos">Email</p>
+                    <input type="text" id="inp_email" class="inputs" placeholder="Insira sua senha">
                 </div>
 
                 <!-- parte direita do meio -->
-                <div class="mid_left">
+                <div class="mid_right">
                     <p class="campos">Sobrenome</p>
-                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira seu sobrenome"><br>
+                    <input type="text" id="inp_sobre" class="inputs" placeholder="Insira seu sobrenome"><br>
 
-                    <p class="campos">Email</p>
-                    <input type="text" id="inp_nome" class="inputs" placeholder="Insira seu email"><br>
+                    <p class="campos">Senha</p>
+                    <input type="text" id="inp_senha" class="inputs" placeholder="Insira seu email"><br>
 
-                    <p class="campos">Confirmar senha</p>
-                    <input type="text" id="inp_nome" class="inputs" placeholder="Confirme sua senha">
                 </div>
 
 
             </div>
 
+
             <div class="cadastro_bot">
 
-                <br>
-                <button onclick="login()" class="botao_cadastrar"> <b>Cadastrar</b></button>
+                <!-- Mensagem de erro caso o cadastro estiver errado -->
+                <div class="erro" id="div_msg"></div>
 
-                <button class="redi_login"><b>Login</b></button>
+                <br>
+
+
+                <button onclick="cadastro()" class="botao_cadastrar"> <b>Cadastrar</b></button>
+
+                <button onclick="login()" class="redi_login"><b>Login</b></button>
             </div>
 
         </div>
@@ -77,6 +78,33 @@
 </html>
 
 <script>
+
+    function cadastro() {
+
+        var campo_1 = inp_nome.value;
+        var campo_2 = inp_sobre.value;
+        var campo_3 = inp_email.value;
+        var campo_4 = inp_senha.value;
+        var nome = `teste`;
+        var sobre = `teste`;
+        var email = `teste`;
+        var senha = `teste`;
+        var msg = ``;
+
+        if (campo_1 != nome || campo_2 != sobre || campo_3 != email || campo_4 != senha) {
+            msg = `Preencha todos os campos de acordo com os requisitos!`;
+        }
+
+        else {
+            msg = `<span style="color:green; font-size:17px;"> Cadastro realizado com sucesso!</span>`;
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 1000);
+        }
+
+        div_msg.innerHTML = msg;
+
+    }
 
     function login() {
         window.location.href = "login.html"

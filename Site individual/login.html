@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="happy.png">
 </head>
+
 <body>
-    
+
+    <!-- div geral -->
+    <div class="body">
+
+        <!-- div dos protagonistas à esquerda -->
+        <div class="protas">
+            <img src="protas1.png">
+        </div>
+
+        <!-- div da parte de cadastro à direita -->
+        <div class="login">
+
+
+            <!-- div da parte superior do cadastro -->
+            <div class="login_top">
+                <img src="happy.png" width=70 length=70>
+                <p class="titulo"><b>ShonenTech</b></p>
+                <p class="login_titulo">Login</p> <br>
+            </div>
+
+            <!-- div da parte do meio do cadastro -->
+            <div class="login_mid">
+
+                <div class="center">
+
+                    <p class="campos">Email</p>
+                    <input type="text" id="inp_user" class="inputs" placeholder="Insira seu email"><br>
+
+                    <p class="campos">Senha</p>
+                    <input type="text" id="inp_senha" class="inputs" placeholder="Insira sua senha">
+
+                </div>
+
+            </div>
+
+            <div class="login_bot">
+
+
+                <div id="div_msg"></div>
+
+                <br>
+
+                <button onclick="index()" class="botao_login"> <b>Entrar</b></button>
+
+                <button onclick="cadastro()" class="redi_cadastro"><b>Cadastrar-se</b></button>
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
+
+<script>
+
+    function index() {
+
+        var campo_1 = inp_user.value;
+        var campo_2 = inp_senha.value;
+        var user = `teste`;
+        var senha = `teste`;
+        var msg = ``;
+
+        if (campo_1 != user || campo_2 != senha) {
+            msg = `<span style="color:red; font-size:17px;"> Usuário ou senha inválidos!</span>`;
+        }
+
+        else {
+            msg = `<span style="color:green; font-size:17px;"> Logado com sucesso!</span>`;
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 1000);
+        }
+
+        div_msg.innerHTML = msg;
+
+    }
+
+    function cadastro() {
+        window.location.href = "cadastro.html"
+    }
+
+</script>
