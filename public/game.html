@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packs</title>
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="icon" href="assets/imgs/happy.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo">
+            <img src="assets/imgs/happy.png" width=60 length=60 />
+            <p class="shonen">ShonenTech</p>
+        </div>
+
+
+        <div class="navbar">
+            <a href="index.html">Início</a>
+            <a href="index.html #animes">Animes</a>
+            <a href="game.html">Packs</a>
+            <a href="login.html">Login</a>
+        </div>
+
+    </div>
+
+    <div class="conteudo">
+
+        <!-- Lado esquerdo -->
+        <div class="left">
+
+            <h3>
+                <p class="creditos">Créditos:</p>
+                <div id="creditos"></div>
+
+            </h3>
+
+            <p class="oque">O que são os <br> ShonenPacks?</p>
+
+        </div>
+
+        <!-- Meio -->
+        <div class="mid">
+
+            <h1>Shonen Packs</h1>
+
+            <h3>Selecione o pack que deseja abrir:</h3>
+
+            <div class="area_packs">
+
+                <div class="pack1">
+
+                    <!-- Para abrir o pack1 -->
+                    <img src="assets/imgs/pack1.png" width="210" height="300" onclick="pack1()" class="pack">
+                    5 créditos | 3 cartas
+
+                </div>
+
+                <div class="pack1">
+
+                    <!-- Para abrir o pack2 -->
+                    <img src="assets/imgs/pack2.png" width="210" height="300" onclick="pack2()" class="pack">
+                    10 créditos | 7 cartas
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="right">
+
+            <button onclick="dashboard()" class="botao_dash">Dashboard</button>
+
+            <!-- Para ver as cartas obtidas -->
+            <button onclick="obtidas()" class="botao_cartas">Minhas cartas</button> <br> <br>
+
+        </div>
+
+
+
+        <!-- Dialogs para exibir msg como modal -->
+        <dialog id="new_cartas" class="modal">
+            <h2>Cartas Obtidas</h2>
+            <div id="div_msg" class="imagem_card"></div> <br>
+            <button onclick="new_cartas.close()" class="botao_modal">OK</button>
+        </dialog>
+
+        <dialog id="my_cartas" class="modal">
+            <h2>Todas as cartas obtidas</h2>
+            <div id="div_msg1" class="imagem_card"></div> <br>
+            <button onclick="my_cartas.close()" class="botao_modal">OK</button>
+        </dialog>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script src="./js/game.js"></script>

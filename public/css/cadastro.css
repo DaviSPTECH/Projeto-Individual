@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+.body {
+display: flex;
+flex-direction: row;
+}
+
+.protas {
+    display: flex;
+    height: 100vh;
+}
+
+.cadastro {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+}
+
+.cadastro_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  color: #12aad4;
+}
+
+.cadastro_mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.mid_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.mid_right {
+  display: flex;
+  flex-direction: column;
+}
+
+.cadastro_bot {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.botao_cadastrar {
+  display: flex;
+  width: 40vh;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  background-color: #2696B6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botao_cadastrar:hover {
+  background-color: #12aad4;
+}
+
+.redi_login {
+  display: flex;
+  width: 40vh;
+  height: 45px;
+  background: none;
+  border: none;
+  color: #2696B6;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cadastre-se {
+  display: flex;
+  margin-top: 30px;
+  font-size: 24px ;
+}
+
+.campos {
+  display: flex;
+  font-size: 18px;
+  justify-content: start;
+}
+
+.inputs {
+  display: flex;
+  height: 25px;
+  width: 40vh;
+  font-size: 14.5px ;
+  padding: 6px;
+}
+
+.erro {
+  font-size: 17px;
+  color: red;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" href="../assets/imgs/happy.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="left">
+
+        <div class="logo">
+
+            <img src="../assets/imgs/happy.png" width=60 length=60>
+            <p class="shonen">ShonenTech</p>
+
+        </div>
+
+        <div class="bot_left">
+
+            <p class="dash">Dashboard</p>
+
+            <button onclick="voltar()" class="botao">Voltar</button>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="area_grafico">
+
+        <div class="sup">
+
+            <div class="titulo">
+
+                <p>Estatísticas</p>
+
+            </div>
+
+            <div class="kpis">
+
+                <p class="one">Créditos gastos</p>
+                <p class="two">Pacotes abertos</p>
+                <p class="three">Maior média</p>
+                <p class="four">Cartas repetidas</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bot">
+
+            <div class="grafico">
+
+                <canvas id="myChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+
+<script src="../js/dashboard.js"></script>

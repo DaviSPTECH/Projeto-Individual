@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="assets/imgs/happy.png">
+</head>
+
+<body>
+
+    <!-- div geral -->
+    <div class="body">
+
+        <!-- div dos protagonistas à esquerda -->
+        <div class="protas">
+            <img src="assets/imgs/protas1.png">
+        </div>
+
+        <!-- div da parte de cadastro à direita -->
+        <div class="login">
+
+
+            <!-- div da parte superior do cadastro -->
+            <div class="login_top">
+                <img src="assets/imgs/happy.png" width=70 length=70>
+                <p class="titulo"><b>ShonenTech</b></p>
+                <p class="login_titulo">Login</p> <br>
+            </div>
+
+            <!-- div da parte do meio do cadastro -->
+            <div class="login_mid">
+
+                <div class="center">
+
+                    <p class="campos">Email</p>
+                    <input type="text" id="inp_user" class="inputs" placeholder="Insira seu email"
+                        value="a@mail.com"><br>
+
+                    <p class="campos">Senha</p>
+                    <input type="text" id="inp_senha" class="inputs" placeholder="Insira sua senha" value="123">
+                    <div class="mensagem_erro"></div>
+
+                </div>
+
+            </div>
+
+            <div class="login_bot">
+
+
+                <div id="div_aguardar"></div>
+                <div id="div_erros_login"></div>
+
+                <br>
+
+                <button onclick="entrar()" class="botao_login"> <b>Entrar</b></button>
+
+                <button onclick="cadastrar()" class="redi_cadastro"><b>Cadastrar-se</b></button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="./js/sessao.js"></script>
+<script src="./js/login.js"></script>
