@@ -11,6 +11,7 @@ function entrar() {
         finalizarAguardar();
         return false;
     }
+    
     else {
         setInterval(sumirMensagem, 5000)
     }
@@ -58,7 +59,6 @@ function entrar() {
     }).catch(function (erro) {
         console.log(erro);
     })
-    check_creditos();
     return false;
 }
 function sumirMensagem() {
@@ -66,45 +66,6 @@ function sumirMensagem() {
 }
 
 function cadastrar () {
-    check_creditos();
     window.location.href = "cadastro.html";
 }
 
-
-function check_creditos() {
-
-    fetch("/usuarios/creditos", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            fk_usuarioServer: sessionStorage.ID_USUARIO
-        })
-
-    }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO check_creditos()!")
-        if (resposta.ok) {
-            console.log(resposta);
-
-            resposta.json().then(json => {
-                console.log(json);
-                console.log(JSON.stringify(json));
-                sessionStorage.QTD_CREDITOS = json.qtd_creditos;
-
-            });
-
-        } else {
-
-            console.log("Houve um erro ao tentar verificar os creditos!");
-
-            resposta.text().then(texto => {
-                console.error(texto);
-            });
-        }
-
-    }).catch(function (erro) {
-        console.log(erro);
-    })
-
-}

@@ -18,11 +18,10 @@
         </div>
 
 
-        <div class="navbar">
+        <div class="navbar" id="nb">
             <a href="index.html">Início</a>
             <a href="index.html #animes">Animes</a>
             <a href="game.html">Packs</a>
-            <a href="login.html">Login</a>
         </div>
 
     </div>
@@ -34,9 +33,11 @@
 
             <h3>
                 <p class="creditos">Créditos:</p>
-                <div id="creditos"></div>
+                <div id="creditos">100</div>
 
             </h3>
+
+            <div id="total"></div>
 
             <p class="oque">O que são os <br> ShonenPacks?</p>
 
@@ -105,3 +106,19 @@
 </html>
 
 <script src="./js/game.js"></script>
+
+<script>
+    
+    if (isNaN(sessionStorage.ID_USUARIO)) {
+        nb.innerHTML += `<a href="login.html">Login</a>`;
+    } else {
+        nb.innerHTML += `<a onclick="limparSessao()">Sair</a>`;
+    }
+
+
+    function limparSessao() {
+        sessionStorage.clear();
+        window.location = "login.html";
+    }
+    
+</script>

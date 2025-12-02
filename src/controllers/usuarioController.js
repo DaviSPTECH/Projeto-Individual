@@ -1,5 +1,6 @@
 var usuarioModel = require("../models/usuarioModel");
 
+
 function autenticar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
@@ -71,70 +72,7 @@ function cadastrar(req, res) {
     }
 }
 
-function check_creditos(req, res) {
-    var fk_usuario = req.body.fk_usuarioServer; 
-    console.log(fk_usuario)
-    usuarioModel.check_creditos(fk_usuario)
-            .then(
-                function (resultado) {
-                    res.json(resultado[0]);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar ao verificar os créditos! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-    
-}
-
-function up_creditos(req, res) {
-    var fk_usuario = req.body.fk_usuarioServer; 
-    var novo_valor = req.body.novo_valor;
-    
-    usuarioModel.up_creditos(fk_usuario, novo_valor)
-        .then(function (resultado) {
-            res.json(resultado);
-        }).catch(function (erro) {
-            console.log(erro);
-            res.status(500).json(erro.sqlMessage);
-        });
-}
-
-function inserir_colecao(req, res) {
-    var fk_usuario = req.body.fk_usuarioServer;
-    var fk_carta = req.body.fk_cartaServer;
-
-    usuarioModel.inserir_colecao(fk_usuario, fk_carta)
-        .then(function (resultado) {
-            res.json(resultado);
-        }).catch(function (erro) {
-            console.log(erro);
-            res.status(500).json(erro.sqlMessage);
-        });
-}
-
-function obter_colecao_usuario(req, res) {
-    var fk_usuario = req.body.fk_usuarioServer;
-
-    usuarioModel.obter_colecao_usuario(fk_usuario)
-        .then(function (resultado) {
-            res.json(resultado);
-        }).catch(function (erro) {
-            console.log(erro);
-            res.status(500).json(erro.sqlMessage);
-        });
-}
-
 module.exports = {
     autenticar,
-    cadastrar,
-    check_creditos,
-    up_creditos,
-    inserir_colecao,
-    obter_colecao_usuario
+    cadastrar
 }

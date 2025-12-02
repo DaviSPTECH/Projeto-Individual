@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/imgs/happy.png">
+    <link rel="script" href="./js/sessao.js">
 </head>
 
 <body>
@@ -20,11 +21,10 @@
             </div>
 
 
-            <div class="navbar">
+            <div class="navbar" id="nb">
                 <a href="index.html">Início</a>
                 <a href="#animes">Animes</a>
                 <a href="game.html">Packs</a>
-                <a href="login.html">Login</a>
             </div>
 
         </div>
@@ -46,7 +46,8 @@
 
                 <p class="titulo"><b>Sobre animes</b></p>
 
-                São adaptações dos mangás (histórias em quadrinhos japonesas) em forma de animação, e o Shonen é
+                São principalmente um meio de entretenimento, sendo adaptações dos mangás (histórias em quadrinhos
+                japonesas) em forma de animação, e o Shonen é
                 o gênero mais conhecido, foi popularizado com Dragon Ball que é considerado o pai dos animes, tendo
                 influenciado na criação de grandes obras incluindo o "Big Three", que são considerados os três grandes
                 mangás da Shonen Jump (revista responsável pela publicação dos capítulos semanais dos maiores Shonens da
@@ -69,7 +70,11 @@
 
                     <img src="assets/imgs/One_Piece_Logo.png" width="220" height="80" class="img">
 
-                    <b>One Piece</b> Meu anime favorito, vai muito além de um pirata que se estica. Essa obra reflete diversas situações da vida real, como política, abuso de poder, desigualdade social, mas principalmente a jornada atrás dos próprios sonhos. Cada pirata do chapéu de palha tem seu próprio objetivo, mas todos lutam também apoiando seus companheiros a chegarem onde almejam.
+                    <b>One Piece</b> Luffy deseja se tornar o rei dos piratas, e para isso montou sua própria
+                    tripulação. Essa obra reflete
+                    situações da vida real, como política, desigualdade social, mas
+                    principalmente a jornada atrás dos sonhos. Cada chapéu de palha tem seu próprio
+                    objetivo.
 
 
                 </div>
@@ -84,8 +89,11 @@
 
                     <img src="assets/imgs/naruto_logo.png" width="220" height="80" class="img">
 
-                    <b>Naruto</b> É o primeiro anime da minha vida, muito marcante principalmente na minha infância. É mostrado que o trabalho duro tem a capacidade de superar o dom natural, tendo foco, disciplina, muito treinamento e um objetivo claro. 
-                    Naruto também reflete que apesar das críticas, nunca devemos abaixar a cabeça, pois a persistência é o caminho para a glória!
+                    <b>Naruto</b> Subestimado por quase todos, Naruto busca provar seu valor através de seu jeito ninja!
+                    É
+                    mostrado que o trabalho duro tem a capacidade de superar o dom natural, tendo foco, disciplina,
+                    muito treinamento e um objetivo claro.
+
 
 
                 </div>
@@ -104,8 +112,13 @@
 
                     <img src="assets/imgs/hxh_logo.png" width="220" height="90" class="img">
 
-                    <b>Hunter x Hunter</b> É o melhor anime que já vi, não ficando acima por questão sentimental e de apego, mas é outra obra que me marcou muito, 
-a história nos mostra o quão valiosa pode ser uma amizade, e que a confiança é algo que se constrói com o tempo, como é possível ver na linda jornada de Gon e Killua, que evoluem juntos superando seus desafios.
+                    <b>Hunter x Hunter</b> Gon busca se tornar um caçador para entender porque seu pai o abandonou para
+                    seguir
+                    essa carreira.
+                    A história nos mostra que a confiança é algo que se constrói com o tempo, como vemos na linda
+                    jornada de Gon
+                    e Killua, que evoluem juntos superando seus
+                    desafios.
 
 
                 </div>
@@ -120,11 +133,10 @@ a história nos mostra o quão valiosa pode ser uma amizade, e que a confiança 
 
                     <img src="assets/imgs/bleach_logo.png" width="260" height="110" class="img">
 
-                    <b>Bleach</b> dolor sit amet, consectetur adipiscing elit. Sed nonne memento, inquit, omnium trium?
-                    Quis
-                    istum, inquit, dedit honestum? Ita, non solum ad perfectionem virtutis quisque, sed etiam ad ipsam
-                    vitam
-                    et quibuscum ageret et in
+                    <b>Bleach</b> Acompanha a jornada de ichigo, um ceifador de almas substituto que está em
+                    constante evolução, sempre determinado a salvar seus companheiros e achar uma saída para os
+                    problemas que aparecem,
+                    demonstrando resiliência.
 
 
                 </div>
@@ -137,18 +149,16 @@ a história nos mostra o quão valiosa pode ser uma amizade, e que a confiança 
 
             <div class="clover">
 
-                <img src="assets/astayami.gif" width="500" length="500" class="gif">
+                <img src="assets/astayami.gif" width="500" length="500" class="clover_gif">
 
                 <div class="sobre_bc">
 
                     <img src="assets/imgs/Black_Clover_Logo.png" width="240" height="80" class="img">
 
-                    <b>Black Clover</b> dolor sit amet, consectetur adipiscing elit. Sed nonne memento, inquit, omnium
-                    trium?
-                    Quis
-                    istum, inquit, dedit honestum? Ita, non solum ad perfectionem virtutis quisque, sed etiam ad ipsam
-                    vitam
-                    et quibuscum ageret et in
+                    <b>Black Clover</b> Em um mundo onde todos nascem com magia, Asta nasceu sem esse
+                    dom, porém nunca desistiu de seu sonho: se tornar o rei mago, e graças a sua força vontade e
+                    objetivo
+                    claro, ele foi capaz de descobrir seu verdadeiro poder: a anti magia.
 
 
                 </div>
@@ -160,18 +170,114 @@ a história nos mostra o quão valiosa pode ser uma amizade, e que a confiança 
 
         </div>
 
+        <div class="eu" id="eu">
+
+            <img src="assets/imgs/eu.jpg" class="my_face">
+
+
+            <div class="my_life">
+
+                <p class="sobre_mim"><b>Sobre mim e os animes na minha vida</b></p> <br> <br>
+
+                Nascido em 2001, desde criança sempre gostei muito de assistir desenhos, principalmente os que passavam
+                no canal Jetix e no bom dia & cia. Meu primeiro contato com os animes foi com Naruto, que na época
+                passava no SBT no horário do almoço e eu assistia antes de ir para a escola. Marcou muito a minha
+                infancia e também a adolescência, não só com o anime, mas também com jogos de video game, desde o mugen
+                até o Playstation 4. Porém só fui conhecer
+                outros animes na época que comecei o ensino médio, e isso marcou muito essa fase, porque junto com uma
+                grande mudança na minha vida, a de trocar de escola depois de 9 anos na mesma, eu conhecia uma nova
+                grande
+                paixão, e um novo ciclo se iniciava. Foi nesse período que conheci a maioria de meus animes favoritos.
+                <br>
+                Eu sou uma pessoa resiliente, e parte dessa resiliência eu atribuo a alguns dos animes que vi. Um
+                fator típico dos animes shonen
+                é justamente isso, determinado personagem cair, perder uma batalha, mas não se dar como derrotado, se
+                dedicar a melhorar, dar tudo de si nos treinamentos, dominar uma técnica,
+                dar a volta por cima e no fim superar seus limites derrotando um oponente, por exemplo.
+
+
+            </div>
+
+        </div>
+
         <div class="onu">
 
             <p class="titulo"><b>Objetivos de Desenvolvimento Sustentável | ONU</b></p>
 
-            <div class="imagens">
+            <div class="imagens_ods">
 
-                <img src="assets/imgs/ods2.png" width="200" length="200">
-                <img src="assets/imgs/ods3.png" width="200" length="200">
-                <img src="assets/imgs/ods5.png" width="200" length="200">
+                <div class="ods235">
+
+                    <img src="assets/imgs/ods2.png" width="200" length="200">
+
+                    <img src="assets/imgs/ods3.png" width="200" length="200">
+
+                    <img src="assets/imgs/ods5.png" width="200" length="200">
+
+                </div>
+
+
+                <div class="ods3">
+
+                    <p class="desc_ods">Em One Piece, Luffy e sua aliança pirata lutam e acabam com o reinado de
+                        Kaidou, que
+                        fazia com que parte da população de Wano passasse fome, devido a regulação de alimentação de
+                        qualidade apenas a elite, enquanto
+                        o restante da população só tinha acesso a alimentos contaminados em decorrência da poluição dos
+                        rios (afetando as plantações) causada pela suas fábricas de armas.
+                    </p>
+
+
+                    <p class="desc_ods">Em Kuroko no Basket, é mostrado que para ter um bom desempenho, é necessário
+                        estar bem tanto
+                        fisica quanto mentalmente, tendo como exemplo Kagami, que fisicamente é um dos mais aptos no
+                        esporte, chegando no nível da
+                        geração dos milagres, porém, fatores emocionais (saúde mental) afetam seu desempenho em quadra,
+                        e somente com
+                        a confiança necessária a vitória é alcançada.
+                    </p>
+
+                    <p class="desc_ods">Nos animes shonen, temos diversos casos de força feminina trazendo a igualdade
+                        de gênero,
+                        como grande exemplo temos Mereoleona Vermillion, de Black Clover, que é uma das mais valentes
+                        personagens da obra, assumindo o posto de capitã do
+                        esquadrão de cavaleiros mágicos Leões Carmesins, demonstrando que mulheres podem ser figuras de
+                        liderança e símbolos de poder.
+                    </p>
+
+                </div>
+
 
             </div>
 
+        </div>
+
+        <div class="footer">
+
+            <div class="contato">
+
+                <div class="outlook">
+
+                    <img src="assets/imgs/outlook.png">
+                    davi.pereira@sptech.school
+
+                </div>
+
+
+                <div class="git">
+
+                    <img src="assets/imgs/git.png">
+                    DaviSPTECH
+
+                </div>
+
+            </div>
+
+            <div class="by">
+
+                Desenvolvido Por Davi Vital  -  1ADSA  |  2025
+
+            </div>
 
         </div>
 
@@ -180,3 +286,17 @@ a história nos mostra o quão valiosa pode ser uma amizade, e que a confiança 
 </body>
 
 </html>
+
+<script>
+    if (isNaN(sessionStorage.ID_USUARIO)) {
+        nb.innerHTML += `<a href="login.html">Login</a>`;
+    } else {
+        nb.innerHTML += `<a onclick="limparSessao() class=">Sair</a>`;
+    }
+
+
+    function limparSessao() {
+        sessionStorage.clear();
+        window.location = "login.html";
+    }
+</script>

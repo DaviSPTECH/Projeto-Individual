@@ -30,6 +30,7 @@ fk_usuario INT,
 fk_carta INT,
 versao INT,
 preco INT,
+qtd_aberturas INT,
 CONSTRAINT pkComposta PRIMARY KEY (id_pack, fk_usuario, fk_carta),
 CONSTRAINT fk_usuario_pack FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usuario),
 CONSTRAINT fk_carta_pack FOREIGN KEY (fk_carta) REFERENCES carta(id_carta)
@@ -44,11 +45,13 @@ CONSTRAINT fk_usuario_colecao FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usu
 CONSTRAINT fk_carta_colecao FOREIGN KEY (fk_carta) REFERENCES carta(id_carta)
 );
 
-CREATE TABLE creditos (
-id_creditos INT PRIMARY KEY AUTO_INCREMENT,
-qtd_creditos INT,
+CREATE TABLE estatisticas (
+id_estatisticas INT PRIMARY KEY AUTO_INCREMENT,
 fk_usuario INT,
-CONSTRAINT fk_usuario_creditos FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usuario));
+media_nivel FLOAT,
+total_cartas INT,
+CONSTRAINT fk_usuario_estatisticas FOREIGN KEY (fk_usuario) REFERENCES usuario(id_usuario)
+);
 
 INSERT INTO carta (personagem, anime, nivel) VALUES
 ('Ace', 'One Piece', 91),

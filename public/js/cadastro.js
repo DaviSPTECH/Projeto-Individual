@@ -19,9 +19,10 @@ function cadastrar() {
             // finalizarAguardar();
             return false;
 
-        } else if (!email_formatado.includes('@') || !email_formatado.includes('.')) {
+        } else if (!email_formatado.includes('@') || !email_formatado.endsWith('.com')) {
             alert("Email inválido!")
             return false;
+            
 
         } else if (cf_senhaVar != senhaVar) {
             alert("Senhas diferentes!")
@@ -31,7 +32,6 @@ function cadastrar() {
         else {
             setInterval(sumirMensagem, 5000);
         }
-
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -65,6 +65,7 @@ function cadastrar() {
                 } else {
                     throw "Houve um erro ao tentar realizar o cadastro!";
                 }
+
             })
             .catch(function (resposta) {
                 console.log(`#ERRO: ${resposta}`);

@@ -23,7 +23,7 @@
 
         <div class="bot_left">
 
-            <p class="dash">Dashboard</p>
+            <p class="dash" id="nome_user">Dashboard</p>
 
             <button onclick="voltar()" class="botao">Voltar</button>
 
@@ -39,18 +39,10 @@
 
             <div class="titulo">
 
-                <p>Estatísticas</p>
+                <p><b>Estatísticas</b></p>
 
             </div>
 
-            <div class="kpis">
-
-                <p class="one">Créditos gastos</p>
-                <p class="two">Pacotes abertos</p>
-                <p class="three">Maior média</p>
-                <p class="four">Cartas repetidas</p>
-
-            </div>
 
         </div>
 
@@ -59,11 +51,23 @@
 
             <div class="grafico">
 
+                <p><b>Personagens mais obtidos</b></p>
+
                 <canvas id="myChart"></canvas>
 
             </div>
 
+            <div class="kpis">
+
+                <p class="one" id="kpi1">Carta mais obtida</p>
+                <p class="two" id="kpi2">Total de cartas</p>
+                <p class="three" id="kpi3">Média de poder</p>
+
+            </div>
+
         </div>
+
+
 
     </div>
 
